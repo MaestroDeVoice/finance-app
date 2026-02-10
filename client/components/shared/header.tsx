@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@/components/shared';
-import { LayoutDashboard, UserRound } from 'lucide-react';
+import { BanknoteArrowUp, DoorOpen, LayoutDashboard, LogIn, NotebookPen, UserRound, Wallet } from 'lucide-react';
 
 interface Props {
   className?: string;
@@ -9,15 +9,18 @@ interface Props {
 export const Header: React.FC<Props> = ({ className }) => {
   return (
     <div className={`${className} flex justify-between`}>
-      <Container className="mr-4 items-center">
-        <LayoutDashboard className="mr-4" size={52} color="grey" />
+      <div className="flex mr-4 items-center">
+      <NotebookPen className="mr-4" size={52} />
+        {/* <BanknoteArrowUp className="mr-4" size={52} color="green" /> */}
         <div>
-          <h1 className="text-2xl uppercase">Finance dashboard</h1>
+          <h1 className="text-2xl">Амбарная книга</h1>
           <span>Краткая сводка по приложению</span>
         </div>
-      </Container>
-      <Container className="items-center h-fit bg-black/10">
-        <UserRound size={16} strokeWidth={1.5} className="mr-1" />
+      </div>
+      <Container className="items-center h-fit bg-black/10!">
+        {/* <DoorOpen className="mr-3" /> */}
+        <LogIn className="mr-3" />
+        {/* <UserRound className="mr-3" /> */}
         <button>Войти</button>
       </Container>
     </div>
